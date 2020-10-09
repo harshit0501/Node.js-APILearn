@@ -37,14 +37,13 @@ const BootcampSchema = new mongoose.Schema({
     required: [true, "Please add an address"],
   },
   location: {
+      //GeoJSON Point 
     type: {
       type: String,
       enum: ["Point"],
-      required: true,
     },
     coordinates: {
       type: [Number],
-      required: true,
       index: "2dsphere",
     },
     formattedAddress: String,
@@ -62,8 +61,8 @@ const BootcampSchema = new mongoose.Schema({
       "Mobile Development",
       "UI/UX",
       "Data Science",
-      "Buisness",
-      "Other",
+      "Business",
+      "Other"
     ],
   },
   averageRating: {
