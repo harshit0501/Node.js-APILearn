@@ -28,14 +28,19 @@ const CourseSchema = new mongoose.Schema({
     default: false,
   },
   createdAt: {
-      type: Date,
-      default: Date.now
+    type: Date,
+    default: Date.now,
   },
   bootcamp: {
-      type: mongoose.Schema.ObjectId,
-      ref: 'Bootcamp',
-      required: true
-  }
+    type: mongoose.Schema.ObjectId,
+    ref: "Bootcamp",
+    required: true,
+  },
+  user: {
+    type: mongoose.Schema.ObjectId,
+    ref: "User",
+    required: true,
+  },
 });
 
 // Static method to get avg of course tuitions
